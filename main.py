@@ -17,7 +17,7 @@ CheckURLs = [
     'bit.ly'
 ]
 CheckURLPatterns = {
-    'bit.ly': r'(http|https)://(.*)(bit.ly)/(.+)',
+    'bit.ly': r'(http|https)://(.*)(bit.ly)/([\w\d]+)',
 }
 
 ## 檔案讀取 bytes 上限
@@ -34,7 +34,7 @@ Headers = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:61.0) Gecko/2010010
 
 ## 詳細模式
 ## 選擇性開啟。(關閉 False，開啟 True)
-VerboseMode = False
+VerboseMode = True
 
 # 載入檔案
 ad_data_raw = os.open("ad_data.json", os.O_RDONLY)
